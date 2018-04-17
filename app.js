@@ -133,42 +133,7 @@ function drawPaths (svg, data, x, y) {
 }
 
 function addMarker (marker, svg, chartHeight, x) {
-  var radius = 32,
-      xPos = x(marker.date) - radius - 3,
-      yPosStart = chartHeight - radius - 3,
-      yPosEnd = (marker.type === 'Client' ? 80 : 160) + radius - 3;
-
-  var markerG = svg.append('g')
-    .attr('class', 'marker '+marker.type.toLowerCase())
-    .attr('transform', 'translate(' + xPos + ', ' + yPosStart + ')')
-    .attr('opacity', 0);
-
-  markerG.transition()
-    .duration(1000)
-    .attr('transform', 'translate(' + xPos + ', ' + yPosEnd + ')')
-    .attr('opacity', 1);
-
-  markerG.append('path')
-    .attr('d', 'M' + radius + ',' + (chartHeight-yPosStart) + 'L' + radius + ',' + (chartHeight-yPosStart))
-    .transition()
-      .duration(1000)
-      .attr('d', 'M' + radius + ',' + (chartHeight-yPosEnd) + 'L' + radius + ',' + (radius*2));
-
-  markerG.append('circle')
-    .attr('class', 'marker-bg')
-    .attr('cx', radius)
-    .attr('cy', radius)
-    .attr('r', radius);
-
-  markerG.append('text')
-    .attr('x', radius)
-    .attr('y', radius*0.9)
-    .text(marker.type);
-
-  markerG.append('text')
-    .attr('x', radius)
-    .attr('y', radius*1.5)
-    .text(marker.version);
+  // code hidden
 }
 
 function startTransitions (svg, chartWidth, chartHeight, rectClip, markers, x) {
