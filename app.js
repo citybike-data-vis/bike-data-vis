@@ -106,7 +106,7 @@ function drawPaths (svg, data, x, y) {
 
   svg.datum(data);
 
-  svg.append('path')
+  /*svg.append('path')
     .attr('class', 'area upper outer')
     .attr('d', upperOuterArea)
     .attr('clip-path', 'url(#rect-clip)');
@@ -124,7 +124,7 @@ function drawPaths (svg, data, x, y) {
   svg.append('path')
     .attr('class', 'area lower inner')
     .attr('d', lowerInnerArea)
-    .attr('clip-path', 'url(#rect-clip)');
+    .attr('clip-path', 'url(#rect-clip)');*/
 
   svg.append('path')
     .attr('class', 'median-line')
@@ -235,7 +235,7 @@ d3.json('data.json', function (error, rawData) {
       pct95: d.pct95 / 1000
     };
   });
-
+  console.log(data)
   d3.json('markers.json', function (error, markerData) {
     if (error) {
       console.error(error);
