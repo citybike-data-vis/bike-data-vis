@@ -16,7 +16,7 @@ def main():
         outfile = args.file + ".json"
     
     reader = csv.DictReader( csvfile )
-    out = json.dumps( [ row for row in reader ] )
+    out = json.dumps( [ row for row in reader ], sort_keys=True, indent=4)
 
     jsonfile = open(outfile, 'w')
     jsonfile.write(out)
