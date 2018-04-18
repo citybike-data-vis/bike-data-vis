@@ -38,3 +38,5 @@ data sample from `hourly-avg-*`
 1,"2017-06-02 03:00:00",22.0
 1,"2017-06-02 04:00:00",21.8
 ```
+
+![sample](sample.png)
