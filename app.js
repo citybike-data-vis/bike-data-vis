@@ -1,6 +1,6 @@
 function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
   var legendWidth  = 200,
-      legendHeight = 100;
+      legendHeight = 50;
 
   // clipping to make sure nothing appears behind legend
   svg.append('clipPath')
@@ -40,91 +40,24 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
     .attr('width',  legendWidth)
     .attr('height', legendHeight);
 
-  legend.append('rect')
-    .attr('class', 'outer')
-    .attr('width',  75)
-    .attr('height', 20)
-    .attr('x', 10)
-    .attr('y', 10);
+  legend.append('path')
+    .attr('class', 'median-line')
+    .attr('d', 'M10,25L85,25');
 
   legend.append('text')
     .attr('x', 115)
     .attr('y', 25)
-    .text('5% - 95%');
-
-  legend.append('rect')
-    .attr('class', 'inner')
-    .attr('width',  75)
-    .attr('height', 20)
-    .attr('x', 10)
-    .attr('y', 40);
-
-  legend.append('text')
-    .attr('x', 115)
-    .attr('y', 55)
-    .text('25% - 75%');
-
-  legend.append('path')
-    .attr('class', 'median-line')
-    .attr('d', 'M10,80L85,80');
-
-  legend.append('text')
-    .attr('x', 115)
-    .attr('y', 85)
-    .text('Median');
+    .text('Hourly avg');
 }
 
 function drawPaths (svg, data, x, y) {
-  var upperOuterArea = d3.svg.area()
-    .interpolate('basis')
-    .x (function (d) { return x(d.date) || 1; })
-    .y0(function (d) { return y(d.pct95); })
-    .y1(function (d) { return y(d.pct75); });
-
-  var upperInnerArea = d3.svg.area()
-    .interpolate('basis')
-    .x (function (d) { return x(d.date) || 1; })
-    .y0(function (d) { return y(d.pct75); })
-    .y1(function (d) { return y(d.pct50); });
-
+  
   var medianLine = d3.svg.line()
     .interpolate('basis')
     .x(function (d) { return x(d.date); })
     .y(function (d) { return y(d.pct50); });
 
-  var lowerInnerArea = d3.svg.area()
-    .interpolate('basis')
-    .x (function (d) { return x(d.date) || 1; })
-    .y0(function (d) { return y(d.pct50); })
-    .y1(function (d) { return y(d.pct25); });
-
-  var lowerOuterArea = d3.svg.area()
-    .interpolate('basis')
-    .x (function (d) { return x(d.date) || 1; })
-    .y0(function (d) { return y(d.pct25); })
-    .y1(function (d) { return y(d.pct05); });
-
   svg.datum(data);
-
-  /*svg.append('path')
-    .attr('class', 'area upper outer')
-    .attr('d', upperOuterArea)
-    .attr('clip-path', 'url(#rect-clip)');
-
-  svg.append('path')
-    .attr('class', 'area lower outer')
-    .attr('d', lowerOuterArea)
-    .attr('clip-path', 'url(#rect-clip)');
-
-  svg.append('path')
-    .attr('class', 'area upper inner')
-    .attr('d', upperInnerArea)
-    .attr('clip-path', 'url(#rect-clip)');
-
-  svg.append('path')
-    .attr('class', 'area lower inner')
-    .attr('d', lowerInnerArea)
-    .attr('clip-path', 'url(#rect-clip)');*/
 
   svg.append('path')
     .attr('class', 'median-line')
@@ -158,7 +91,8 @@ function makeChart (data, markers) {
   var x = d3.time.scale().range([0, chartWidth])
             .domain(d3.extent(data, function (d) { return d.date; })),
       y = d3.scale.linear().range([chartHeight, 0])
-            .domain([0, d3.max(data, function (d) { return d.pct95; })]);
+            .domain([0, d3.max(data, function (d) { return 40; })]);
+            console.log(y)
 
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
@@ -193,10 +127,7 @@ d3.json('data.json', function (error, rawData) {
   var data = rawData.map(function (d) {
     return {
       date:  parseDate(d.date),
-      pct05: d.pct05 / 1000,
-      pct25: d.pct25 / 1000,
       pct50: d.pct50 / 1000,
-      pct75: d.pct75 / 1000,
       pct95: d.pct95 / 1000
     };
   });
