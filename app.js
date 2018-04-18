@@ -55,7 +55,7 @@ function drawPaths (svg, data, x, y) {
   var medianLine = d3.svg.line()
     .interpolate('basis')
     .x(function (d) { return x(d.date); })
-    .y(function (d) { return y(d.pct50); });
+    .y(function (d) { return y(d.avlbikes); });
 
   svg.datum(data);
 
@@ -86,13 +86,14 @@ function makeChart (data, markers) {
       svgHeight = 500,
       margin = { top: 20, right: 20, bottom: 40, left: 40 },
       chartWidth  = svgWidth  - margin.left - margin.right,
-      chartHeight = svgHeight - margin.top  - margin.bottom;
+      chartHeight = svgHeight - margin.top  - margin.bottom,
+      y_heigth = 30;
 
   var x = d3.time.scale().range([0, chartWidth])
             .domain(d3.extent(data, function (d) { return d.date; })),
       y = d3.scale.linear().range([chartHeight, 0])
-            .domain([0, d3.max(data, function (d) { return 40; })]);
-            console.log(y)
+            .domain([0, d3.max(data, function (d) { return y_heigth; })]);
+          
 
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
                 .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
@@ -127,8 +128,7 @@ d3.json('data.json', function (error, rawData) {
   var data = rawData.map(function (d) {
     return {
       date:  parseDate(d.date),
-      pct50: d.pct50 / 1000,
-      pct95: d.pct95 / 1000
+     avlbikes: d.avlbikes
     };
   });
   console.log(data)
