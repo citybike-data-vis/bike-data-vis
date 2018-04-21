@@ -1,5 +1,9 @@
 # bike-data-vis
 
+![sample](map-sample.png)
+
+## Tips
+
 sample commands
 ```
 cat bikeAvailability-2017-06-01-klo-08-09.csv|grep 008,|sort > bikeAvailability-2017-06-01-klo-08-09_station-008.csv
@@ -38,5 +42,3 @@ data sample from `hourly-avg-*`
 1,"2017-06-02 03:00:00",22.0
 1,"2017-06-02 04:00:00",21.8
 ```
-
-![sample](sample.png)

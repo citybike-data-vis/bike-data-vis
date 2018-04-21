@@ -74,3 +74,8 @@ svg {
 .marker text {
   text-anchor: middle;
 }
+
+#map {
+  height: 500px;
+  width: 960px;
+}
