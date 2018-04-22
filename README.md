@@ -1,6 +1,6 @@
 # bike-data-vis
 
-![sample](map-sample.png)
+![sample](sample-side-by-side.png)
 
 ## Tips
 

@@ -35,11 +35,16 @@ svg {
   stroke: rgba(96, 96, 255, 0.8);
 }
 
-.median-line,
-.legend .median-line {
+.normal-line,
+.legend .normal-line {
   fill: none;
   stroke: #000;
   stroke-width: 3;
+}
+
+.normal-line.red,
+.legend .normal-line.red {
+  stroke: rgb(255, 0, 0);
 }
 
 .legend .legend-bg {
@@ -76,6 +81,24 @@ svg {
 }
 
 #map {
-  height: 500px;
-  width: 960px;
+  height: 900px;
+  width: 900px;
+}
+
+body {
+  background: rgb(235, 235, 235);
+}
+
+.root-container {
+  background: #fff;
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 1440px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
