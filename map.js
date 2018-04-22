@@ -9,6 +9,7 @@ function addStationMarker(coordinates, markerTitle) {
   });
   marker.addListener('click', function () {
     console.log('clicked on:', marker.title)
+    document.getElementById("stationInput").value = marker.title
   });
 }
 
