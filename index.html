@@ -12,10 +12,11 @@
       <div id="map" style="float: left;"></div>
       <form style="padding: 10px">
         Station:
-        <input id="stationInput" type="text" name="firstname" value="001"></input>
+        <input id="stationInput" type="text" name="station" value="001"></input>
+        <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
         <input type="button" value="plot" onClick="plotStation()"></input>
       </form> 
-      <div id="plots" style="overflow-y: scroll; max-height: 900px">   
+      <div id="plots" style="overflow-y: scroll; max-height: 900px">
       </div>
     </div>
   </body>
@@ -23,8 +24,9 @@
   <script>
     function plotStation() {
       var stationInput = document.getElementById("stationInput").value
+      var dateInput = document.getElementById("dateInput").value
       console.log('Processing input:', stationInput)
-      createPlot(stationInput, '2017-06-01');
+      createPlot(stationInput, dateInput);
     }
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
