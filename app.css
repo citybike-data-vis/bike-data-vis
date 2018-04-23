@@ -113,6 +113,10 @@ body {
 .topnav {
   background-color: #333;
   overflow: hidden;
+  margin: auto;
+  border-radius: 5px;
+  width: 1440px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
 /* Style the links inside the navigation bar */
