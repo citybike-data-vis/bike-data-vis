@@ -170,7 +170,7 @@ function createPlot(stationId, chosenDate) {
     var areaWidth = 500;
     var areaHeight = 300;
     
-    console.log(filteredData)
+    //console.log(filteredData.time.getDate)
     drawChart(filteredData, areaWidth, areaHeight);
   });
 }

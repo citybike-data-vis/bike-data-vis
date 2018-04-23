@@ -8,23 +8,15 @@
   </head>
 
   <body>
-    <div class="topnav">
-      <a class="active" href="#home">Home</a>
-      <a href="#availability">System availability</a>
-      <a href="index.html">Station view</a>
-      <a href="heatmap.html">HeatMap view</a>
-    </div> 
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#availability">System availability</a>
+            <a href="index.html">Station view</a>
+            <a href="heatmap.html">HeatMap view</a>
+        </div>  
 
     <div class="root-container">
-      <div id="map" style="float: left;"></div>
-      <form style="padding: 10px">
-        Station:
-        <input id="stationInput" type="text" name="station" value="001"></input>
-        <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
-        <input type="button" value="plot" onClick="plotStation()"></input>
-        <input type="button" value="reset" onClick="resetPlots()"></input>
-      </form> 
-      <div id="plots" style="overflow-y: scroll; max-height: 900px">
+      <div id="map" style="float: left;"></div> 
       </div>
     </div>
   </body>
@@ -41,8 +33,7 @@
     }
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
-  <script src="app.js"></script>
-  <script type='text/javascript' src="map.js"></script>
+  <script type='text/javascript' src="heatmap.js"></script>
   <script>
     if (APIKEY) {
       console.log('apikey found!')
