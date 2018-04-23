@@ -133,7 +133,7 @@ function initMap() {
     zoomControl: false,
     styles: styles
   }
-  var mapDomElement = document.getElementById('map');
+  var mapDomElement = document.getElementById('heatmap');
 
   MAP = new google.maps.Map(mapDomElement, mapOptions);
 

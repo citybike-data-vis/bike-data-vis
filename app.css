@@ -85,6 +85,11 @@ svg {
   width: 900px;
 }
 
+#heatmap {
+  height: 900px;
+  width: 1420px;
+}
+
 body {
   background: rgb(235, 235, 235);
 }
@@ -98,6 +103,7 @@ body {
   box-sizing: border-box;
   padding: 10px;
   margin: auto;
+  margin-top: 10px;
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
