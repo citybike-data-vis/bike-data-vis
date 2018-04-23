@@ -30,7 +30,7 @@
       createPlot(stationInput, dateInput);
     }
     function resetPlots() {
-      console.log("Hello")
+      d3.select('#plots').selectAll("*").remove()
     }
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
