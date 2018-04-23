@@ -5,7 +5,16 @@ function addStationMarker(coordinates, markerTitle) {
   var marker = new google.maps.Marker({
     position: coordinates,
     map: MAP,
-    title: markerTitle
+    title: markerTitle,
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 30,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 0,
+      fillColor: '#FF0000',
+      fillOpacity: 0.35,
+    }
   });
   marker.addListener('click', function () {
     console.log('clicked on:', marker.title)
