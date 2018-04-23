@@ -104,7 +104,8 @@ function drawChart (data, areaWidth, areaHeight) {
     .on('click', deletePlot(data[0].stationId))
     .append('text')
       .text('delete')
-  var plotInfo ='Station: ' + data[0].stationId + ', date: ' + data[0].time.toISOString().substring(0,10)
+  var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
+  var plotInfo ='Station: ' + data[0].stationId + ', date: ' + data[0].time.toLocaleDateString('fi-FI', options)
   area.append('p').append('text').text(plotInfo)
 
 
