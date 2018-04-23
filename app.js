@@ -79,7 +79,7 @@ function drawLine (graphArea, data, x, y) {
 }
 
 function drawChart (data, areaWidth, areaHeight) {
-  var animate = true;
+  var animate = false;
   
   var svgWidth  = areaWidth,
       svgHeight = areaHeight,
@@ -127,9 +127,9 @@ function drawChart (data, areaWidth, areaHeight) {
   }
 }
 
-function createPlot(stationId) {
+function createPlot(stationId, chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
-
+  
   d3.json('data.json', function (error, rawData) {
     if (error) {
       console.error(error);
@@ -142,14 +142,21 @@ function createPlot(stationId) {
     var data = rawData.map(function (d) {
       return {
         time:  parseDate(d.time),
+        stationId: parseInt(d.stationid),
         avlbikes: d.avlbikes
       };
     });
+
+    var filteredData = data
+      .filter( dataItem => dataItem.stationId === parseInt(stationId))
+      .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
+
     var areaWidth = 500;
     var areaHeight = 300;
   
-    drawChart(data, areaWidth, areaHeight);
+    drawChart(filteredData, areaWidth, areaHeight);
   });
 }
 
-createPlot(001);
+
+createPlot(032, '2017-06-01');
