@@ -99,7 +99,10 @@ function drawChart (data, areaWidth, areaHeight) {
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
 
   var area = d3.select('#plots').insert('div', ':first-child').attr('id', data.stationId)
+  console.log(data[0].stationId)
   var button = area.append('button').append('text').text('delete').on('click', deletePlot(data.stationId))
+  var plotInfo ='Station: ' + data[0].stationId + ', date: ' + data[0].time.toISOString().substring(0,10)
+  area.append('p').append('text').text(plotInfo)
 
   function _initDrawingArea() {
     return area.append('svg')
@@ -162,7 +165,8 @@ function createPlot(stationId, chosenDate) {
 
     var areaWidth = 500;
     var areaHeight = 300;
-  
+    
+    console.log(filteredData)
     drawChart(filteredData, areaWidth, areaHeight);
   });
 }
