@@ -98,8 +98,11 @@ function drawChart (data, areaWidth, areaHeight) {
       yAxis = d3.svg.axis().scale(y).orient('left')
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
 
-  var area = d3.select('#plots').insert('div', ':first-child').attr('id', data.stationId)
-  var button = area.append('button').append('text').text('delete').on('click', deletePlot(data.stationId))
+  var area = d3.select('#plots').insert('div', ':first-child').attr('id', 'plot' + data[0].stationId)
+  var button = area.append('button')
+    .on('click', deletePlot(data[0].stationId))
+    .append('text')
+      .text('delete')
 
   function _initDrawingArea() {
     return area.append('svg')
@@ -110,8 +113,7 @@ function drawChart (data, areaWidth, areaHeight) {
   }
 
   function deletePlot(stationid) {
-    console.log(stationid)
-    return d3.select('#' + stationid).remove()
+    return function(){d3.select('#plot' + stationid).remove()}
   }
 
   var graphArea = _initDrawingArea()
