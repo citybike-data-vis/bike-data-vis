@@ -9,53 +9,19 @@
 
   <body>
     <div class="topnav">
-      <a class="active" href="#home">Home</a>
+      <a class="active" href="index.html">Home</a>
       <a href="#availability">System availability</a>
-      <a href="index.html">Station view</a>
+      <a href="stations.html">Station view</a>
       <a href="heatmap.html">HeatMap view</a>
     </div> 
-
+   
+    
     <div class="root-container">
-      <div id="map" style="float: left;"></div>
-      <form style="padding: 10px">
-        Station:
-        <input id="stationInput" type="text" name="station" value="001"></input>
-        <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
-        <input type="button" value="plot" onClick="plotStation()"></input>
-        <input type="button" value="reset" onClick="resetPlots()"></input>
-      </form> 
-      <div id="plots" style="overflow-y: scroll; max-height: 900px">
-      </div>
+        <p>kissa</p>
+        
+        
     </div>
   </body>
-  
-  <script>
-    function plotStation() {
-      var stationInput = document.getElementById("stationInput").value
-      var dateInput = document.getElementById("dateInput").value
-      console.log('Processing input:', stationInput)
-      createPlot(stationInput, dateInput);
-    }
-    function resetPlots() {
-      d3.select('#plots').selectAll("*").remove()
-    }
-  </script>
-  <script src="http://d3js.org/d3.v3.js"></script>
-  <script src="app.js"></script>
-  <script type='text/javascript' src="map.js"></script>
-  <script>
-    if (APIKEY) {
-      console.log('apikey found!')
 
-      function addScriptElementToDocument(url) {
-        var script = document.createElement("script");
-        script.src = url
-        document.body.appendChild(script);
-      }
-      
-      addScriptElementToDocument("https://maps.googleapis.com/maps/api/js?key=" + APIKEY + "&callback=initMap")
-    } else {
-      console.log('apikey not found')
-    }
-  </script>
+
 </html>
