@@ -98,12 +98,20 @@ function drawChart (data, areaWidth, areaHeight) {
       yAxis = d3.svg.axis().scale(y).orient('left')
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
 
+  var area = d3.select('#plots').insert('div', ':first-child').attr('id', data.stationId)
+  var button = area.append('button').append('text').text('delete').on('click', deletePlot(data.stationId))
+
   function _initDrawingArea() {
-    return d3.select('#plots').append('svg')
+    return area.append('svg')
     .attr('width',  svgWidth)
     .attr('height', svgHeight)
     .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+  }
+
+  function deletePlot(stationid) {
+    console.log(stationid)
+    return d3.select('#' + stationid).remove()
   }
 
   var graphArea = _initDrawingArea()
@@ -126,6 +134,7 @@ function drawChart (data, areaWidth, areaHeight) {
     startAnimation(chartWidth, rectClip);
   }
 }
+
 
 function createPlot(stationId, chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;

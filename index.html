@@ -15,6 +15,7 @@
             Station:
             <input id="stationInput" type="text" name="firstname" value="001"></input>
             <input type="button" value="plot" onClick="plotStation()"></input>
+            <input type="button" value="reset" onClick="resetPlots()"></input>
           </form> 
       </div>
     </div>
@@ -25,6 +26,9 @@
       var stationInput = document.getElementById("stationInput").value
       console.log('Processing input:', stationInput)
       createPlot(stationInput, '2017-06-01');
+    }
+    function resetPlots() {
+      console.log("Hello")
     }
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
