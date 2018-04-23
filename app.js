@@ -99,7 +99,7 @@ function drawChart (data, areaWidth, areaHeight) {
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
 
   function _initDrawingArea() {
-    return d3.select('#plots').append('svg')
+    return d3.select('#plots').insert('svg', ':first-child')
     .attr('width',  svgWidth)
     .attr('height', svgHeight)
     .append('g')
