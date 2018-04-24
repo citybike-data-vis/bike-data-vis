@@ -1,0 +1,1482 @@
+[
+    {
+        "avlbikes": "5.3", 
+        "stationid": "1", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.6", 
+        "stationid": "1", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.8", 
+        "stationid": "2", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.9", 
+        "stationid": "2", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.5", 
+        "stationid": "3", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.5", 
+        "stationid": "3", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.6", 
+        "stationid": "4", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.4", 
+        "stationid": "4", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.0", 
+        "stationid": "5", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.6", 
+        "stationid": "5", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.8", 
+        "stationid": "6", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.2", 
+        "stationid": "6", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.4", 
+        "stationid": "7", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.2", 
+        "stationid": "7", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "26.1", 
+        "stationid": "8", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "26.3", 
+        "stationid": "8", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "51.9", 
+        "stationid": "9", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "51.0", 
+        "stationid": "9", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "26.7", 
+        "stationid": "10", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "26.1", 
+        "stationid": "10", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "46.9", 
+        "stationid": "11", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "42.2", 
+        "stationid": "11", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "19.0", 
+        "stationid": "12", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "24.6", 
+        "stationid": "12", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "13", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.1", 
+        "stationid": "13", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "23.3", 
+        "stationid": "14", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "24.7", 
+        "stationid": "14", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.2", 
+        "stationid": "15", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.0", 
+        "stationid": "15", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "16", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.0", 
+        "stationid": "16", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.9", 
+        "stationid": "17", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "17", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "33.0", 
+        "stationid": "18", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "39.5", 
+        "stationid": "18", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "16.1", 
+        "stationid": "19", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "18.3", 
+        "stationid": "19", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "19.7", 
+        "stationid": "20", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "20.1", 
+        "stationid": "20", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "22.7", 
+        "stationid": "21", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "18.5", 
+        "stationid": "21", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "17.1", 
+        "stationid": "22", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "19.0", 
+        "stationid": "22", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "26.7", 
+        "stationid": "23", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "21.5", 
+        "stationid": "23", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "18.2", 
+        "stationid": "24", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "20.4", 
+        "stationid": "24", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.4", 
+        "stationid": "25", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.7", 
+        "stationid": "25", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.6", 
+        "stationid": "26", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.9", 
+        "stationid": "26", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "4.7", 
+        "stationid": "27", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.8", 
+        "stationid": "27", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "28", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.7", 
+        "stationid": "28", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.1", 
+        "stationid": "29", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.7", 
+        "stationid": "29", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "32.8", 
+        "stationid": "30", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "31.6", 
+        "stationid": "30", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.7", 
+        "stationid": "31", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.3", 
+        "stationid": "31", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.5", 
+        "stationid": "32", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.3", 
+        "stationid": "32", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.3", 
+        "stationid": "33", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.0", 
+        "stationid": "33", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.3", 
+        "stationid": "34", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.3", 
+        "stationid": "34", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.4", 
+        "stationid": "36", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.7", 
+        "stationid": "36", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.5", 
+        "stationid": "37", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.2", 
+        "stationid": "37", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.4", 
+        "stationid": "38", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.8", 
+        "stationid": "38", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.7", 
+        "stationid": "39", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.6", 
+        "stationid": "39", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "27.4", 
+        "stationid": "40", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "27.0", 
+        "stationid": "40", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.8", 
+        "stationid": "41", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.9", 
+        "stationid": "41", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.3", 
+        "stationid": "42", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.6", 
+        "stationid": "42", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.3", 
+        "stationid": "43", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "43", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "12.1", 
+        "stationid": "44", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "20.5", 
+        "stationid": "44", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "45", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.9", 
+        "stationid": "45", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "46", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.9", 
+        "stationid": "46", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.7", 
+        "stationid": "47", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "11.6", 
+        "stationid": "47", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.6", 
+        "stationid": "48", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.4", 
+        "stationid": "48", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "19.0", 
+        "stationid": "50", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "18.3", 
+        "stationid": "50", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "51", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.6", 
+        "stationid": "51", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "11.2", 
+        "stationid": "52", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "10.8", 
+        "stationid": "52", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "12.3", 
+        "stationid": "53", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "15.0", 
+        "stationid": "53", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "15.0", 
+        "stationid": "54", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "14.7", 
+        "stationid": "54", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "55", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.2", 
+        "stationid": "55", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.8", 
+        "stationid": "56", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.1", 
+        "stationid": "56", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.4", 
+        "stationid": "57", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.4", 
+        "stationid": "57", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.9", 
+        "stationid": "58", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.3", 
+        "stationid": "58", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "36.3", 
+        "stationid": "60", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "31.9", 
+        "stationid": "60", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.5", 
+        "stationid": "61", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.4", 
+        "stationid": "61", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.4", 
+        "stationid": "62", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.2", 
+        "stationid": "62", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.0", 
+        "stationid": "63", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.2", 
+        "stationid": "63", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.3", 
+        "stationid": "64", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.0", 
+        "stationid": "64", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "18.9", 
+        "stationid": "65", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "19.8", 
+        "stationid": "65", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "14.4", 
+        "stationid": "66", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "13.4", 
+        "stationid": "66", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.6", 
+        "stationid": "68", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.6", 
+        "stationid": "68", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.7", 
+        "stationid": "69", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.3", 
+        "stationid": "69", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.5", 
+        "stationid": "70", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.1", 
+        "stationid": "70", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "5.8", 
+        "stationid": "71", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.3", 
+        "stationid": "71", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.6", 
+        "stationid": "72", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.1", 
+        "stationid": "72", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "5.0", 
+        "stationid": "73", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.5", 
+        "stationid": "73", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.7", 
+        "stationid": "74", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.4", 
+        "stationid": "74", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.6", 
+        "stationid": "75", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.2", 
+        "stationid": "75", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.1", 
+        "stationid": "76", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.5", 
+        "stationid": "76", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "78", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.7", 
+        "stationid": "78", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.7", 
+        "stationid": "79", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.4", 
+        "stationid": "79", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.0", 
+        "stationid": "80", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.1", 
+        "stationid": "80", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.0", 
+        "stationid": "81", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.6", 
+        "stationid": "81", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.2", 
+        "stationid": "82", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.7", 
+        "stationid": "82", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "26.5", 
+        "stationid": "83", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "16.9", 
+        "stationid": "83", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.3", 
+        "stationid": "85", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.4", 
+        "stationid": "85", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.3", 
+        "stationid": "86", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.8", 
+        "stationid": "86", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "15.6", 
+        "stationid": "88", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "13.5", 
+        "stationid": "88", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.6", 
+        "stationid": "89", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.5", 
+        "stationid": "89", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.6", 
+        "stationid": "90", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.7", 
+        "stationid": "90", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.7", 
+        "stationid": "91", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.0", 
+        "stationid": "91", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.0", 
+        "stationid": "92", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.3", 
+        "stationid": "92", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.0", 
+        "stationid": "93", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.8", 
+        "stationid": "93", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "26.1", 
+        "stationid": "94", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "27.6", 
+        "stationid": "94", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "21.8", 
+        "stationid": "95", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "22.3", 
+        "stationid": "95", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "17.0", 
+        "stationid": "96", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "16.7", 
+        "stationid": "96", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.9", 
+        "stationid": "97", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.3", 
+        "stationid": "97", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.0", 
+        "stationid": "98", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.0", 
+        "stationid": "98", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "99", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.4", 
+        "stationid": "99", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "100", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "100", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "15.6", 
+        "stationid": "101", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "16.4", 
+        "stationid": "101", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.4", 
+        "stationid": "102", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.7", 
+        "stationid": "102", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.5", 
+        "stationid": "103", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.1", 
+        "stationid": "103", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "12.0", 
+        "stationid": "104", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "12.7", 
+        "stationid": "104", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "16.5", 
+        "stationid": "105", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "16.6", 
+        "stationid": "105", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "15.2", 
+        "stationid": "106", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "13.4", 
+        "stationid": "106", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.8", 
+        "stationid": "107", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.7", 
+        "stationid": "107", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "108", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.6", 
+        "stationid": "108", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.3", 
+        "stationid": "110", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "110", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "12.8", 
+        "stationid": "111", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "12.6", 
+        "stationid": "111", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.6", 
+        "stationid": "112", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.4", 
+        "stationid": "112", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.1", 
+        "stationid": "113", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.9", 
+        "stationid": "113", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.8", 
+        "stationid": "114", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.7", 
+        "stationid": "114", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.4", 
+        "stationid": "115", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.1", 
+        "stationid": "115", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "4.2", 
+        "stationid": "116", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.3", 
+        "stationid": "116", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "4.4", 
+        "stationid": "117", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.6", 
+        "stationid": "117", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "4.9", 
+        "stationid": "118", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.7", 
+        "stationid": "118", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.6", 
+        "stationid": "119", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "119", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "5.8", 
+        "stationid": "120", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.1", 
+        "stationid": "120", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.4", 
+        "stationid": "122", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.1", 
+        "stationid": "122", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.8", 
+        "stationid": "123", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.9", 
+        "stationid": "123", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.3", 
+        "stationid": "125", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.1", 
+        "stationid": "125", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "21.7", 
+        "stationid": "126", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "23.2", 
+        "stationid": "126", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.2", 
+        "stationid": "127", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "10.0", 
+        "stationid": "127", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "0.0", 
+        "stationid": "128", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.0", 
+        "stationid": "128", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.1", 
+        "stationid": "129", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.7", 
+        "stationid": "129", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "28.9", 
+        "stationid": "130", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "27.5", 
+        "stationid": "130", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "21.0", 
+        "stationid": "131", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "16.9", 
+        "stationid": "131", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.8", 
+        "stationid": "133", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "133", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.3", 
+        "stationid": "134", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.9", 
+        "stationid": "134", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.4", 
+        "stationid": "135", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.1", 
+        "stationid": "135", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.0", 
+        "stationid": "136", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "0.0", 
+        "stationid": "136", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.8", 
+        "stationid": "137", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.9", 
+        "stationid": "137", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.6", 
+        "stationid": "138", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.5", 
+        "stationid": "138", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "18.9", 
+        "stationid": "139", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "17.7", 
+        "stationid": "139", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "11.3", 
+        "stationid": "140", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "11.8", 
+        "stationid": "140", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.6", 
+        "stationid": "141", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.9", 
+        "stationid": "141", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.5", 
+        "stationid": "142", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.7", 
+        "stationid": "142", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.7", 
+        "stationid": "144", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.1", 
+        "stationid": "144", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "3.0", 
+        "stationid": "145", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "2.9", 
+        "stationid": "145", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "1.7", 
+        "stationid": "146", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "3.1", 
+        "stationid": "146", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.2", 
+        "stationid": "147", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "8.8", 
+        "stationid": "147", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "16.5", 
+        "stationid": "148", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "15.7", 
+        "stationid": "148", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.8", 
+        "stationid": "149", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.6", 
+        "stationid": "149", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "2.5", 
+        "stationid": "150", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "4.2", 
+        "stationid": "150", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.6", 
+        "stationid": "151", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.9", 
+        "stationid": "151", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.0", 
+        "stationid": "152", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "10.0", 
+        "stationid": "152", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "11.9", 
+        "stationid": "153", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "12.0", 
+        "stationid": "153", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "8.8", 
+        "stationid": "154", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.0", 
+        "stationid": "154", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "18.9", 
+        "stationid": "155", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "17.3", 
+        "stationid": "155", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "10.0", 
+        "stationid": "156", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "11.0", 
+        "stationid": "156", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "157", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "7.0", 
+        "stationid": "157", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "6.0", 
+        "stationid": "158", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "5.0", 
+        "stationid": "158", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "13.1", 
+        "stationid": "159", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "13.0", 
+        "stationid": "159", 
+        "time": "2017-06-30 11:00:00"
+    }, 
+    {
+        "avlbikes": "9.0", 
+        "stationid": "160", 
+        "time": "2017-06-30 10:00:00"
+    }, 
+    {
+        "avlbikes": "9.0", 
+        "stationid": "160", 
+        "time": "2017-06-30 11:00:00"
+    }
+]
