@@ -1,6 +1,16 @@
 var MAP;
 
-function addStationMarker(coordinates, markerTitle) {
+function addStationMarker(coordinates, markerTitle, value) {
+  var color
+  if (value < 5) {
+    color = '#FF0000'
+  } else if (value < 10) {
+    color = '#fffa00'
+  } else {
+    color = '#2aff00'
+  }
+
+  var markerTitle = markerTitle + ' - avg: ' + value;
   console.log('adding station markers')
   var marker = new google.maps.Marker({
     position: coordinates,
@@ -9,18 +19,19 @@ function addStationMarker(coordinates, markerTitle) {
     icon: {
       path: google.maps.SymbolPath.CIRCLE,
       scale: 30,
-      strokeColor: '#FF0000',
+      strokeColor: color,
       strokeOpacity: 0.8,
       strokeWeight: 0,
-      fillColor: '#FF0000',
+      fillColor: color,
       fillOpacity: 0.35,
     }
   });
+
   marker.addListener('click', function () {
     console.log('clicked on:', marker.title)
-    document.getElementById("stationInput").value = marker.title
-    plotStation();
+    console.log(value)
   });
+
 }
 
 function initMap() {
@@ -149,36 +160,26 @@ function initMap() {
   addStationMarkers()
 }
 
-function addStationMarkers() {
-  var data = {
-    "stations": [
-      {
-        "name": "Kaivopuisto",
-        "total_slots": 30,
-        "lat": "60.155411",
-        "lon": "24.950391",
-        "stationId": "001"
-      },
-      {
-        "name": "Laivasillankatu",
-        "total_slots": 12,
-        "lat": "60.159715",
-        "lon": "24.955212",
-        "stationId": "002"
-      },
-      {
-        "name": "Kapteeninpuistikko",
-        "total_slots": 16,
-        "lat": "60.158172",
-        "lon": "24.944808",
-        "stationId": "003"
-      }
-    ]
-  }
 
-  d3.json('stations.json', function (error, data) {
-    data.stations.map(stat => {
-      addStationMarker({ lat: parseFloat(stat.lat), lng: parseFloat(stat.lon)}, stat.stationId)
+function addStationMarkers() {
+  
+  d3.json('heatmap-sample.csv.json', function (error, availabilityData) {
+
+    //loop availability data row by row
+    availabilityData = availabilityData.map(row => {
+
+      //get station coordinates from json
+      d3.json('stations.json', function (error, stationData) {
+        var stationInfo = stationData.stations.find(function(element) {  
+          return element.stationId == parseInt(row.stationid);
+        });
+
+        //use data from stations.json and heatmap-data.json to draw markers
+        var coordinates = { lat: parseFloat(stationInfo.lat), lng: parseFloat(stationInfo.lon)}
+        addStationMarker(coordinates, row.stationid, row.avlbikes)
+      });
+
     })
   })
+  console.log('end of addStationMarkers!')
 }
