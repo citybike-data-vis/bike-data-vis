@@ -1,6 +1,7 @@
 var MAP;
+var HEATMARKERS = [];
 
-function addStationMarker(coordinates, markerTitle, value) {
+function addStationHeatMarker(coordinates, markerTitle, value) {
   var color
   if (value < 5) {
     color = '#FF0000'
@@ -32,6 +33,7 @@ function addStationMarker(coordinates, markerTitle, value) {
     console.log(value)
   });
 
+  HEATMARKERS.push(marker);
 }
 
 function initMap() {
@@ -157,14 +159,18 @@ function initMap() {
 
   MAP = new google.maps.Map(mapDomElement, mapOptions);
 
-  addStationMarkers()
+  //addStationHeatMarkers("2017-06-30 10:00:00")
 }
 
 
-function addStationMarkers() {
+function addStationHeatMarkers(dayAndHour) {
   
-  d3.json('heatmap-sample.csv.json', function (error, availabilityData) {
-
+  d3.json('heatmap-sample2.csv.json', function (error, availabilityData) {
+    //filter by selected date
+    availabilityData = availabilityData.filter(row => 
+      row.time === dayAndHour
+    )
+    
     //loop availability data row by row
     availabilityData = availabilityData.map(row => {
 
@@ -176,7 +182,7 @@ function addStationMarkers() {
 
         //use data from stations.json and heatmap-data.json to draw markers
         var coordinates = { lat: parseFloat(stationInfo.lat), lng: parseFloat(stationInfo.lon)}
-        addStationMarker(coordinates, row.stationid, row.avlbikes)
+        addStationHeatMarker(coordinates, row.stationid, row.avlbikes)
       });
 
     })

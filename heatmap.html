@@ -13,6 +13,10 @@
         <a href="availability.html">System availability</a>
         <a href="stations.html">Station view</a>
         <a href="heatmap.html">HeatMap view</a>
+        <form style="padding: 10px">
+          <input id="dateInput" type="text" name="date" value="2017-06-30 10:00:00"></input>
+          <input type="button" value="plot" onClick="PlotHeatByTime()"></input>
+        </form> 
     </div>  
 
     <div class="root-container">
@@ -22,15 +26,16 @@
   </body>
   
   <script>
-    function plotStation() {
-      var stationInput = document.getElementById("stationInput").value
+    function PlotHeatByTime() {
+      //delete old markers
+      HEATMARKERS.map(marker => marker.setMap(null))
+      
+      //plot new markers
+      console.log('PlotHeatByTime')
       var dateInput = document.getElementById("dateInput").value
-      console.log('Processing input:', stationInput)
-      createPlot(stationInput, dateInput);
+      addStationHeatMarkers(dateInput)
     }
-    function resetPlots() {
-      d3.select('#plots').selectAll("*").remove()
-    }
+  
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
   <script type='text/javascript' src="heatmap.js"></script>
