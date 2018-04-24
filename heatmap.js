@@ -4,11 +4,14 @@ var HEATMARKERS = [];
 function addStationHeatMarker(coordinates, markerTitle, value) {
   var color
   if (value < 5) {
-    color = '#FF0000'
+    color = '#703fa8'
+    fillOpacity = 0.8
   } else if (value < 10) {
-    color = '#fffa00'
+    color = '#ed7438'
+    fillOpacity = 0.8
   } else {
-    color = '#2aff00'
+    color = '#edd738'
+    fillOpacity = 0.8
   }
 
   var markerTitle = markerTitle + ' - avg: ' + value;
@@ -24,7 +27,7 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
       strokeOpacity: 0.8,
       strokeWeight: 0,
       fillColor: color,
-      fillOpacity: 0.35,
+      fillOpacity: fillOpacity,
     }
   });
 
@@ -165,7 +168,7 @@ function initMap() {
 
 function addStationHeatMarkers(dayAndHour) {
   
-  d3.json('heatmap-sample2.csv.json', function (error, availabilityData) {
+  d3.json('hourly-avg-2017-06.csv.json', function (error, availabilityData) {
     //filter by selected date
     availabilityData = availabilityData.filter(row => 
       row.time === dayAndHour

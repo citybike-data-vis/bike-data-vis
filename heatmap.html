@@ -5,6 +5,7 @@
     <title>Trend Chart (Area + Line)</title>
     <link rel="stylesheet" href="app.css">
     <script type='text/javascript' src="apikey.js"></script>
+    <script type='text/javascript' src="moment.js"></script>
   </head>
 
   <body>
@@ -16,6 +17,8 @@
         <form style="padding: 10px">
           <input id="dateInput" type="text" name="date" value="2017-06-30 10:00:00"></input>
           <input type="button" value="plot" onClick="PlotHeatByTime()"></input>
+          <input type="button" value="+1h" onClick="PlotNextHourHeatMap()"></input>
+          <input type="button" value="+1 day" onClick="PlotNextDayHeatMap()"></input>
         </form> 
     </div>  
 
@@ -34,6 +37,52 @@
       console.log('PlotHeatByTime')
       var dateInput = document.getElementById("dateInput").value
       addStationHeatMarkers(dateInput)
+    }
+
+    function PlotNextHourHeatMap() {
+      var dateInput = document.getElementById("dateInput").value
+      var nextDay = moment(dateInput).add(1, 'hours').format("YYYY-MM-DD HH:mm:ss");
+      document.getElementById("dateInput").value = nextDay
+
+      //delete old markers
+      HEATMARKERS.map(marker => marker.setMap(null));
+
+      addStationHeatMarkers(nextDay)
+    }
+
+    function PlotNextDayHeatMap() {
+      var dateInput = document.getElementById("dateInput").value
+      var nextDay = moment(dateInput).add(1, 'days').format("YYYY-MM-DD HH:mm:ss");
+      document.getElementById("dateInput").value = nextDay
+
+      //delete old markers
+      HEATMARKERS.map(marker => {
+        console.log(marker.icon.fillOpacity);
+
+        setTimeout(function(){
+          var oldIcon = marker.getIcon()
+          oldIcon.fillOpacity = 0.3
+          marker.setIcon(oldIcon)
+        }, 100);
+
+        setTimeout(function(){
+          var oldIcon = marker.getIcon()
+          oldIcon.fillOpacity = 0.2
+          marker.setIcon(oldIcon)
+        }, 200);
+
+        setTimeout(function(){
+          var oldIcon = marker.getIcon()
+          oldIcon.fillOpacity = 0.1
+          marker.setIcon(oldIcon)
+        }, 300);
+
+        setTimeout(function(){
+          marker.setMap(null);
+        }, 500);
+      });
+
+      addStationHeatMarkers(nextDay)
     }
   
   </script>
