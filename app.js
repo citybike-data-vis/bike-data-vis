@@ -69,24 +69,27 @@ function drawLine (graphArea, data, x, y) {
     .interpolate('basis')
     .x(function (d) { return x(d.time); })
     .y(function (d) { return y(d.avlbikes); });
-
+  
   graphArea.datum(data);
 
   graphArea.append('path')
     .attr('class', 'normal-line red')
     .attr('d', line)
     .attr('clip-path', 'url(#rect-clip)');
+  
 }
 
-function drawChart (data, areaWidth, areaHeight) {
+function drawChart (data, areaWidth, areaHeight, y_heigth) {
   var animate = false;
-  
+  if (!y_heigth) {
+    y_heigth = 30
+  }
+
   var svgWidth  = areaWidth,
       svgHeight = areaHeight,
       margin = { top: 20, right: 20, bottom: 40, left: 40 },
       chartWidth  = svgWidth  - margin.left - margin.right,
-      chartHeight = svgHeight - margin.top  - margin.bottom,
-      y_heigth = 30;
+      chartHeight = svgHeight - margin.top  - margin.bottom
 
   var x = d3.time.scale().range([0, chartWidth])
             .domain(d3.extent(data, function (d) { return d.time; })),
@@ -175,5 +178,39 @@ function createPlot(stationId, chosenDate) {
   });
 }
 
+function createSystemPlot(chosenDate) {
+  var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
 
-createPlot(032, '2017-06-01');
+
+  d3.json('hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+    
+    var data = rawData.map(function (d) {
+      return {
+        time:  parseDate(d.timehour),
+        avlbikes: d.sumofhourlyavg/3000*100,
+        stationId: 1
+      };
+    });
+
+    console.log(data)
+
+    var filteredData = data
+      .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
+
+    console.log(filteredData)
+
+    var areaWidth = 500;
+    var areaHeight = 300;
+    
+    drawChart(filteredData, areaWidth, areaHeight, 100);
+  });
+
+}
+
+
+//createPlot(032, '2017-06-01');

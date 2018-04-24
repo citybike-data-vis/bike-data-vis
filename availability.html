@@ -14,14 +14,27 @@
       <a href="stations.html">Station view</a>
       <a href="heatmap.html">HeatMap view</a>
     </div> 
-   
+    
     
     <div class="root-container">
-        <p>koira</p>
-        
-        
+        <form style="padding: 10px">
+            <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
+            <input type="button" value="plot" onClick="plotSystemData()"></input>
+        </form> 
+        <div id="plots" style="max-height: 900px"></div>
     </div>
   </body>
 
+  <script src="http://d3js.org/d3.v3.js"></script>
+  <script src="app.js"></script>
+  <script type='text/javascript' src="map.js"></script>
+
+  <script>
+      function plotSystemData() {
+        d3.select('#plots').selectAll("*").remove()
+        var dateInput = document.getElementById("dateInput").value
+        createSystemPlot(dateInput)
+      }
+  </script>
 
 </html>
