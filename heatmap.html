@@ -18,6 +18,7 @@
         <form style="padding: 10px">
           <input id="dateInput" type="text" name="date" value="2017-06-01 10:00:00"></input>
           <input type="button" value="plot" onClick="PlotHeatByTime()"></input>
+          <input type="button" value="-1h" onClick="PlotPrevHourHeatMap()"></input>
           <input type="button" value="+1h" onClick="PlotNextHourHeatMap()"></input>
           <input type="button" value="+1 day" onClick="PlotNextDayHeatMap()"></input>
         </form> 
@@ -49,6 +50,17 @@
       HEATMARKERS.map(marker => marker.setMap(null));
 
       addStationHeatMarkers(nextDay)
+    }
+
+    function PlotPrevHourHeatMap() {
+      var dateInput = document.getElementById("dateInput").value
+      var prevDay = moment(dateInput).add(-1, 'hours').format("YYYY-MM-DD HH:mm:ss");
+      document.getElementById("dateInput").value = prevDay
+
+      //delete old markers
+      HEATMARKERS.map(marker => marker.setMap(null));
+
+      addStationHeatMarkers(prevDay)
     }
 
     function PlotNextDayHeatMap() {
