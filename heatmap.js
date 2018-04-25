@@ -3,15 +3,18 @@ var HEATMARKERS = [];
 
 function addStationHeatMarker(coordinates, markerTitle, value) {
   var color
-  if (value < 5) {
-    color = '#703fa8'
-    fillOpacity = 0.8
+  var fillOpacity = 0.8
+
+  if (value < 3) {
+    color = '#c2e699'
+  } else if (value < 6) {
+    color = '#78c679'
   } else if (value < 10) {
-    color = '#ed7438'
-    fillOpacity = 0.8
+    color = '#31a354'
+  } else if (value < 15) {
+    color = '#006837'
   } else {
-    color = '#edd738'
-    fillOpacity = 0.8
+    color = '#006837'
   }
 
   var markerTitle = markerTitle + ' - avg: ' + value;
