@@ -1,3 +1,4 @@
+
 var MAP;
 var HEATMARKERS = [];
 
@@ -171,7 +172,7 @@ function initMap() {
 
 function addStationHeatMarkers(dayAndHour) {
   
-  d3.json('hourly-avg-2017-06.csv.json', function (error, availabilityData) {
+  d3.json(DATAFOLDER + 'hourly-avg-2017-06.csv.json', function (error, availabilityData) {
     //filter by selected date
     availabilityData = availabilityData.filter(row => 
       row.time === dayAndHour
@@ -181,7 +182,7 @@ function addStationHeatMarkers(dayAndHour) {
     availabilityData = availabilityData.map(row => {
 
       //get station coordinates from json
-      d3.json('stations.json', function (error, stationData) {
+      d3.json(DATAFOLDER + 'stations.json', function (error, stationData) {
         var stationInfo = stationData.stations.find(function(element) {  
           return element.stationId == parseInt(row.stationid);
         });
