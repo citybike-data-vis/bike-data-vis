@@ -197,11 +197,13 @@ function createSystemPlot(chosenDate) {
         stationId: 1
       };
     });
-
+    
     var filteredData = data
-      .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
+      .filter( dataItem => moment(data[0].time.toISOString().substring(0,10)).isAfter('2016-06-07'))
 
-    var areaWidth = 500;
+    console.log(filteredData)
+
+    var areaWidth = 1400;
     var areaHeight = 300;
     drawChart(filteredData, areaWidth, areaHeight, 100);
   });
