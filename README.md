@@ -1,5 +1,11 @@
 # bike-data-vis
 
+Heatmap view
+
+![heatmap](2017-06-09-10%3A00.png)
+
+Station plot
+
 ![sample](sample-side-by-side.png)
 
 ## Tips
