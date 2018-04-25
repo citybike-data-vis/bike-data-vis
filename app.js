@@ -80,6 +80,7 @@ function drawLine (graphArea, data, x, y) {
 }
 
 function drawChart (data, areaWidth, areaHeight, y_heigth) {
+  
   var animate = false;
   if (!y_heigth) {
     y_heigth = 30
@@ -100,9 +101,9 @@ function drawChart (data, areaWidth, areaHeight, y_heigth) {
             .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
       yAxis = d3.svg.axis().scale(y).orient('left')
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
-
+  console.log(data[0])
   var area = d3.select('#plots').insert('div', ':first-child').attr('id', 'plot' + data[0].stationId)
-  console.log(data[0].stationId)
+  console.log("hello")
   var button = area.append('button')
     .on('click', deletePlot(data[0].stationId))
     .append('text')
@@ -197,16 +198,11 @@ function createSystemPlot(chosenDate) {
       };
     });
 
-    console.log(data)
-
     var filteredData = data
       .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
 
-    console.log(filteredData)
-
     var areaWidth = 500;
     var areaHeight = 300;
-    
     drawChart(filteredData, areaWidth, areaHeight, 100);
   });
 

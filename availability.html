@@ -5,6 +5,7 @@
     <title>Trend Chart (Area + Line)</title>
     <link rel="stylesheet" href="app.css">
     <script type='text/javascript' src="apikey.js"></script>
+    <script type='text/javascript' src="moment.js"></script>
   </head>
 
   <body>
@@ -13,13 +14,17 @@
       <a href="availability.html">System availability</a>
       <a href="stations.html">Station view</a>
       <a href="heatmap.html">HeatMap view</a>
+      <form style="padding: 10px">
+          <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
+          <input type="button" value="plot" onClick="plotSystemData()"></input>
+          <input type="button" value="+1h" onClick="plotNextHour()"></input>
+          <input type="button" value="+1 day" onClick="plotNextDay()"></input>
+      </form> 
     </div> 
     
     
     <div class="root-container">
         <form style="padding: 10px">
-            <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
-            <input type="button" value="plot" onClick="plotSystemData()"></input>
         </form> 
         <div id="plots" style="max-height: 900px"></div>
     </div>
@@ -33,6 +38,18 @@
       function plotSystemData() {
         d3.select('#plots').selectAll("*").remove()
         var dateInput = document.getElementById("dateInput").value
+        createSystemPlot(dateInput)
+      }
+
+      function plotNextHour() {
+        console.log("next hour")
+      }
+
+      function plotNextDay() {
+        var dateInput = document.getElementById("dateInput").value
+        var nextDay = moment(dateInput).add(1, 'days').format("YYYY-MM-DD")
+        document.getElementById("dateInput").value = nextDay
+        d3.select('#plots').selectAll("*").remove()
         createSystemPlot(dateInput)
       }
   </script>
