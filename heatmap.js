@@ -4,18 +4,27 @@ var HEATMARKERS = [];
 function addStationHeatMarker(coordinates, markerTitle, value) {
   var color
   var fillOpacity = 0.8
+  var scale
 
   if (value < 3) {
-    color = '#c2e699'
+    color = '#addd8e'
+    scale = 5
   } else if (value < 6) {
     color = '#78c679'
+    scale = 10
   } else if (value < 10) {
-    color = '#31a354'
+    color = '#41ab5d'
+    scale = 15
   } else if (value < 15) {
-    color = '#006837'
+    color = '#238443'
+    scale = 20
   } else {
     color = '#006837'
+    scale = 30
   }
+
+  //color = '#8efc28'
+  scale = 15 * Math.log10(parseFloat(value + 3))
 
   var markerTitle = markerTitle + ' - avg: ' + value;
   console.log('adding station markers')
@@ -25,7 +34,7 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
     title: markerTitle,
     icon: {
       path: google.maps.SymbolPath.CIRCLE,
-      scale: 30,
+      scale: scale,
       strokeColor: color,
       strokeOpacity: 0.8,
       strokeWeight: 0,
@@ -155,8 +164,8 @@ function initMap() {
     }]
 
   var mapOptions = {
-    zoom: 14,
-    center: { lat: 60.175, lng: 24.939671 },
+    zoom: 13,
+    center: { lat: 60.185, lng: 24.939671 },
     disableDefaultUI: true,
     zoomControl: false,
     styles: styles
