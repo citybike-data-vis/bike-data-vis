@@ -1,3 +1,5 @@
+var dataFolder = "data/"
+
 function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
   var legendWidth  = 200,
       legendHeight = 50;
@@ -150,7 +152,7 @@ function drawChart (data, areaWidth, areaHeight, y_heigth) {
 function createPlot(stationId, chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
   
-  d3.json('data.json', function (error, rawData) {
+  d3.json(dataFolder+'data.json', function (error, rawData) {
     if (error) {
       console.error(error);
       return;
@@ -183,7 +185,7 @@ function createSystemPlot(chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
 
 
-  d3.json('hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
+  d3.json(dataFolder + 'hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
 
     if (error) {
       console.error(error);
