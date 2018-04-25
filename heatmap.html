@@ -16,7 +16,7 @@
         <a href="stations.html">Station view</a>
         <a class="active" href="heatmap.html">HeatMap view</a>
         <form style="padding: 10px">
-          <input id="dateInput" type="text" name="date" value="2017-06-30 10:00:00"></input>
+          <input id="dateInput" type="text" name="date" value="2017-06-01 10:00:00"></input>
           <input type="button" value="plot" onClick="PlotHeatByTime()"></input>
           <input type="button" value="+1h" onClick="PlotNextHourHeatMap()"></input>
           <input type="button" value="+1 day" onClick="PlotNextDayHeatMap()"></input>
@@ -85,7 +85,7 @@
 
       addStationHeatMarkers(nextDay)
     }
-  
+
   </script>
   <script src="http://d3js.org/d3.v3.js"></script>
   <script type='text/javascript' src="heatmap.js"></script>
@@ -103,5 +103,9 @@
     } else {
       console.log('apikey not found')
     }
+
+    PlotHeatByTime()
   </script>
+
+  
 </html>
