@@ -167,7 +167,7 @@ function addStationMarkers() {
     ]
   }
 
-  d3.json('stations.json', function (error, data) {
+  d3.json(DATAFOLDER + 'stations.json', function (error, data) {
     data.stations.map(stat => {
       addStationMarker({ lat: parseFloat(stat.lat), lng: parseFloat(stat.lon)}, stat.stationId)
     })
