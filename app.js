@@ -199,8 +199,39 @@ function createSystemPlot(chosenDate) {
     });
 
     var filteredData = data
-      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrAfter('2017-06-05'))
-      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore('2017-06-11')) 
+      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrAfter(chosenDate))
+      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore(moment(chosenDate).add(5, 'days').format("YYYY-MM-DD"))) 
+
+    console.log(filteredData)
+
+    var areaWidth = 1400;
+    var areaHeight = 300;
+    drawChart(filteredData, areaWidth, areaHeight, 100);
+  });
+
+}
+
+function createSystemPlotOneDay(chosenDate) {
+  var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
+
+
+  d3.json(DATAFOLDER + 'hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+    
+    var data = rawData.map(function (d) {
+      return {
+        time:  parseDate(d.timehour),
+        avlbikes: d.sumofhourlyavg/3000*100,
+        stationId: 1
+      };
+    });
+
+    var filteredData = data
+      .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
 
     console.log(filteredData)
 

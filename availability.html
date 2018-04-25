@@ -17,9 +17,10 @@
       <a href="heatmap.html">HeatMap view</a>
       <form style="padding: 10px">
           <input id="dateInput" type="text" name="date" value="2017-06-01"></input>
-          <input type="button" value="plot" onClick="plotSystemData()"></input>
-          <input type="button" value="+1h" onClick="plotNextHour()"></input>
+          <input type="button" value="plot by day" onClick="plotByDay()"></input>
           <input type="button" value="+1 day" onClick="plotNextDay()"></input>
+          <input type="button" value="plot by week" onClick="plotSystemData()"></input>
+          <input type="button" value="+1 week" onClick="plotNextWeek()"></input>
       </form> 
     </div> 
     
@@ -42,8 +43,18 @@
         createSystemPlot(dateInput)
       }
 
-      function plotNextHour() {
-        console.log("next hour")
+      function plotByDay() {
+        d3.select('#plots').selectAll("*").remove()
+        var dateInput = document.getElementById("dateInput").value
+        createSystemPlotOneDay(dateInput)
+      }
+
+      function plotNextWeek() {
+        var dateInput = document.getElementById("dateInput").value
+        var nextWeek = moment(dateInput).add(7, 'days').format("YYYY-MM-DD")
+        document.getElementById("dateInput").value = nextWeek
+        d3.select('#plots').selectAll("*").remove()
+        createSystemPlot(nextWeek)
       }
 
       function plotNextDay() {
@@ -51,7 +62,7 @@
         var nextDay = moment(dateInput).add(1, 'days').format("YYYY-MM-DD")
         document.getElementById("dateInput").value = nextDay
         d3.select('#plots').selectAll("*").remove()
-        createSystemPlot(nextDay)
+        createSystemPlotOneDay(nextDay)
       }
       plotSystemData()
   </script>
