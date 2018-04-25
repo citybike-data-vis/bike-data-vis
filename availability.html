@@ -50,8 +50,9 @@
         var nextDay = moment(dateInput).add(1, 'days').format("YYYY-MM-DD")
         document.getElementById("dateInput").value = nextDay
         d3.select('#plots').selectAll("*").remove()
-        createSystemPlot(dateInput)
+        createSystemPlot(nextDay)
       }
+      plotSystemData()
   </script>
 
 </html>
