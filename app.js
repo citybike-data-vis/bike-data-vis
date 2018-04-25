@@ -197,9 +197,10 @@ function createSystemPlot(chosenDate) {
         stationId: 1
       };
     });
-    
+
     var filteredData = data
-      .filter( dataItem => moment(data[0].time.toISOString().substring(0,10)).isAfter('2016-06-07'))
+      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrAfter('2017-06-05'))
+      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore('2017-06-11')) 
 
     console.log(filteredData)
 
