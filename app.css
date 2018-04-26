@@ -44,7 +44,8 @@ svg {
 
 .normal-line.red,
 .legend .normal-line.red {
-  stroke: rgb(255, 0, 0);
+  /*stroke: rgb(255, 0, 0);*/
+  stroke: #333
 }
 
 .legend .legend-bg {

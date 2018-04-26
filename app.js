@@ -200,7 +200,7 @@ function createSystemPlotWeek(chosenDate) {
 
     var filteredData = data
       .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrAfter(chosenDate))
-      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore(moment(chosenDate).add(5, 'days').format("YYYY-MM-DD"))) 
+      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore(moment(chosenDate).add(6, 'days').format("YYYY-MM-DD"))) 
 
     console.log(filteredData)
 
