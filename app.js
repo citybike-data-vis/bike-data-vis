@@ -179,6 +179,9 @@ function createPlot(stationId, chosenDate) {
   });
 }
 
+/*
+* param chosenDate: 'YYYY-MM-HH'
+*/
 function createSystemPlotWeek(chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
 
@@ -198,9 +201,15 @@ function createSystemPlotWeek(chosenDate) {
       };
     });
 
+    console.log(moment.utc(chosenDate))
+
+    var beginDateUTC = moment.utc(chosenDate).add(-3, 'hours'); //3 hours between UTC and EET
+    var endDateUTC = moment(beginDateUTC).add(7, 'days')
+
     var filteredData = data
-      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrAfter(chosenDate))
-      .filter( dataItem => moment(dataItem.time.toISOString().substring(0,10)).isSameOrBefore(moment(chosenDate).add(6, 'days').format("YYYY-MM-DD"))) 
+      .filter( dataItem => 
+        moment(dataItem.time).isSameOrAfter(beginDateUTC) && 
+        moment(dataItem.time).isSameOrBefore(endDateUTC))
 
     console.log(filteredData)
 
