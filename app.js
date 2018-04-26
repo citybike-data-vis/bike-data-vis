@@ -79,7 +79,7 @@ function drawLine (graphArea, data, x, y) {
   
 }
 
-function drawChart (data, areaWidth, areaHeight, y_heigth) {
+function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader) {
   
   var animate = false;
   if (!y_heigth) {
@@ -108,9 +108,8 @@ function drawChart (data, areaWidth, areaHeight, y_heigth) {
     .on('click', deletePlot(data[0].stationId))
     .append('text')
       .text('delete')
-  var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
-  var plotInfo ='Station: ' + data[0].stationId + ', date: ' + data[0].time.toLocaleDateString('fi-FI', options)
-  area.append('p').append('text').text(plotInfo)
+  
+  area.append('p').append('text').text(plotHeader)
 
 
   function _initDrawingArea() {
@@ -173,13 +172,14 @@ function createPlot(stationId, chosenDate) {
 
     var areaWidth = 500;
     var areaHeight = 300;
-    
+    var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
+    var plotHeader = 'Station: ' + filteredData[0].stationId + ', date: ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
     //console.log(filteredData.time.getDate)
-    drawChart(filteredData, areaWidth, areaHeight);
+    drawChart(filteredData, areaWidth, areaHeight, plotHeader);
   });
 }
 
-function createSystemPlot(chosenDate) {
+function createSystemPlotWeek(chosenDate) {
   var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
 
 
@@ -206,7 +206,9 @@ function createSystemPlot(chosenDate) {
 
     var areaWidth = 1400;
     var areaHeight = 300;
-    drawChart(filteredData, areaWidth, areaHeight, 100);
+    var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
+    var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader);
   });
 
 }
@@ -237,7 +239,9 @@ function createSystemPlotOneDay(chosenDate) {
 
     var areaWidth = 1400;
     var areaHeight = 300;
-    drawChart(filteredData, areaWidth, areaHeight, 100);
+    var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
+    var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader);
   });
 
 }

@@ -40,7 +40,7 @@
       function plotSystemData() {
         d3.select('#plots').selectAll("*").remove()
         var dateInput = document.getElementById("dateInput").value
-        createSystemPlot(dateInput)
+        createSystemPlotWeek(dateInput)
       }
 
       function plotByDay() {
@@ -54,7 +54,7 @@
         var nextWeek = moment(dateInput).add(7, 'days').format("YYYY-MM-DD")
         document.getElementById("dateInput").value = nextWeek
         d3.select('#plots').selectAll("*").remove()
-        createSystemPlot(nextWeek)
+        createSystemPlotWeek(nextWeek)
       }
 
       function plotNextDay() {
