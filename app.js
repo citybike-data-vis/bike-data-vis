@@ -80,7 +80,7 @@ function drawLine (graphArea, data, x, y) {
 }
 
 function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader) {
-  
+  var animate = false;
   var max_of_array = Math.max.apply(Math, data.map(item => item.avlbikes));
 
   y_heigth = Math.max(max_of_array, 30)
@@ -158,15 +158,23 @@ function createPlot(stationId, chosenDate) {
 
     var data = rawData.map(function (d) {
       return {
-        time:  parseDate(d.time),
+        time: d.time,
         stationId: parseInt(d.stationid),
         avlbikes: d.avlbikes
       };
     });
 
-    var filteredData = data
-      .filter( dataItem => dataItem.stationId === parseInt(stationId))
-      .filter( dataItem => dataItem.time.toISOString().substring(0,10) === chosenDate )
+    var filteredData = rawData
+      .filter( dataItem => parseInt(dataItem.stationId) === parseInt(stationId))
+      .filter( dataItem => moment(dataItem.time).add(3, 'hours').format('YYYY-MM-DD') === chosenDate )
+
+    filteredData = filteredData.map(function (d) {
+      return {
+        time: parseDate(moment(d.time).add(3, 'hours').format('YYYY-MM-DD HH:mm:ss')),
+        stationId: parseInt(d.stationId),
+        avlbikes: d.avlbikes
+      }
+    })
 
     var areaWidth = 500;
     var areaHeight = 300;
