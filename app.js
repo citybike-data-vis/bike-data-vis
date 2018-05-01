@@ -164,8 +164,8 @@ function createPlot(stationId, chosenDate) {
       };
     });
 
-    var filteredData = rawData
-      .filter( dataItem => parseInt(dataItem.stationId) === parseInt(stationId))
+    var filteredData = data
+      .filter( dataItem => dataItem.stationId === parseInt(stationId))
       .filter( dataItem => moment(dataItem.time).add(3, 'hours').format('YYYY-MM-DD') === chosenDate )
 
     filteredData = filteredData.map(function (d) {
