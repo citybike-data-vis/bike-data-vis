@@ -81,10 +81,9 @@ function drawLine (graphArea, data, x, y) {
 
 function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader) {
   
-  var animate = false;
-  if (!y_heigth) {
-    y_heigth = 30
-  }
+  var max_of_array = Math.max.apply(Math, data.map(item => item.avlbikes));
+
+  y_heigth = Math.max(max_of_array, 30)
 
   var svgWidth  = areaWidth,
       svgHeight = areaHeight,
@@ -156,7 +155,6 @@ function createPlot(stationId, chosenDate) {
     }
     
     console.log('Now filtering station', stationId, 'data..')
-    console.log('ERROR! filtering not implemented, showing all data!')
 
     var data = rawData.map(function (d) {
       return {
@@ -175,7 +173,7 @@ function createPlot(stationId, chosenDate) {
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
     var plotHeader = 'Station: ' + filteredData[0].stationId + ', date: ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
     //console.log(filteredData.time.getDate)
-    drawChart(filteredData, areaWidth, areaHeight, plotHeader);
+    drawChart(filteredData, areaWidth, areaHeight, 30, plotHeader);
   });
 }
 
