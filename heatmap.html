@@ -17,10 +17,11 @@
         <a class="active" href="heatmap.html">HeatMap view</a>
         <form style="padding: 10px">
           <input id="dateInput" type="text" name="date" value="2017-06-01 10:00:00"></input>
-          <input type="button" value="plot" onClick="PlotHeatByTime()"></input>
-          <input type="button" value="-1h" onClick="PlotPrevHourHeatMap()"></input>
-          <input type="button" value="+1h" onClick="PlotNextHourHeatMap()"></input>
-          <input type="button" value="+1 day" onClick="PlotNextDayHeatMap()"></input>
+          <input type="button" value="plot" onClick="plotHeatByTime()"></input>
+          <input type="button" value="-1 day" onClick="plotChangeTime(-24)"></input>
+          <input type="button" value="-1h" onClick="plotChangeTime(-1)"></input>
+          <input type="button" value="+1h" onClick="plotChangeTime(1)"></input>
+          <input type="button" value="+1 day" onClick="plotChangeTime(24)"></input>
         </form> 
     </div>  
 
@@ -31,44 +32,7 @@
   </body>
   
   <script>
-    function PlotHeatByTime() {
-      //delete old markers
-      HEATMARKERS.map(marker => marker.setMap(null))
-      
-      //plot new markers
-      console.log('PlotHeatByTime')
-      var dateInput = document.getElementById("dateInput").value
-      addStationHeatMarkers(dateInput)
-    }
-
-    function PlotNextHourHeatMap() {
-      var dateInput = document.getElementById("dateInput").value
-      var nextDay = moment(dateInput).add(1, 'hours').format("YYYY-MM-DD HH:mm:ss");
-      document.getElementById("dateInput").value = nextDay
-
-      //delete old markers
-      HEATMARKERS.map(marker => marker.setMap(null));
-
-      addStationHeatMarkers(nextDay)
-    }
-
-    function PlotPrevHourHeatMap() {
-      var dateInput = document.getElementById("dateInput").value
-      var prevDay = moment(dateInput).add(-1, 'hours').format("YYYY-MM-DD HH:mm:ss");
-      document.getElementById("dateInput").value = prevDay
-
-      //delete old markers
-      HEATMARKERS.map(marker => marker.setMap(null));
-
-      addStationHeatMarkers(prevDay)
-    }
-
-    function PlotNextDayHeatMap() {
-      var dateInput = document.getElementById("dateInput").value
-      var nextDay = moment(dateInput).add(1, 'days').format("YYYY-MM-DD HH:mm:ss");
-      document.getElementById("dateInput").value = nextDay
-
-      //delete old markers
+    function removeMarkers() {
       HEATMARKERS.map(marker => {
         console.log(marker.icon.fillOpacity);
 
@@ -94,10 +58,25 @@
           marker.setMap(null);
         }, 500);
       });
-
-      addStationHeatMarkers(nextDay)
     }
 
+    function plotChangeTime(hours) {
+      var dateInput = document.getElementById("dateInput").value
+      var newDate = moment(dateInput).add(hours, 'hours').format("YYYY-MM-DD HH:mm:ss")
+      document.getElementById("dateInput").value = newDate
+
+      plotHeatByTime()
+    }
+
+    function plotHeatByTime() {
+      //delete old markers
+      removeMarkers()
+      
+      //plot new markers
+      console.log('plotHeatByTime')
+      var dateInput = document.getElementById("dateInput").value
+      addStationHeatMarkers(dateInput)
+    }
   </script>
   <script src="https://d3js.org/d3.v3.js"></script>
   <script type='text/javascript' src="heatmap.js"></script>
@@ -116,7 +95,7 @@
       console.log('apikey not found')
     }
 
-    PlotHeatByTime()
+    plotHeatByTime()
   </script>
 
   

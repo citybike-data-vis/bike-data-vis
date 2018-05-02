@@ -180,7 +180,7 @@ function initMap() {
 
 
 function addStationHeatMarkers(dayAndHour) {
-  
+  dayAndHour = moment(dayAndHour).utc().format('YYYY-MM-DD HH:mm:ss')
   d3.json(DATAFOLDER + 'hourly-avg-2017-06.csv.json', function (error, availabilityData) {
     //filter by selected date
     availabilityData = availabilityData.filter(row => 
