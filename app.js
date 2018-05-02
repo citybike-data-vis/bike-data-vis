@@ -1,4 +1,4 @@
-function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
+function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight, dataLabel) {
   var legendWidth  = 200,
       legendHeight = 50;
 
@@ -33,7 +33,7 @@ function addAxesAndLegend (svg, xAxis, yAxis, margin, chartWidth, chartHeight) {
       .attr('y', 6)
       .attr('dy', '.71em')
       .style('text-anchor', 'end')
-      .text('Time (s)');
+      .text(dataLabel);
 
   if (legendVisible) {
     var legend = svg.append('g')
@@ -79,7 +79,7 @@ function drawLine (graphArea, data, x, y) {
   
 }
 
-function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader) {
+function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel) {
   var animate = false;
   var max_of_array = Math.max.apply(Math, data.map(item => item.avlbikes));
 
@@ -125,7 +125,7 @@ function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader) {
 
   var graphArea = _initDrawingArea()
 
-  addAxesAndLegend(graphArea, xAxis, yAxis, margin, chartWidth, chartHeight);
+  addAxesAndLegend(graphArea, xAxis, yAxis, margin, chartWidth, chartHeight, dataLabel);
 
   if (animate) {
     //add mask to hide graphs temporarily
@@ -181,7 +181,8 @@ function createPlot(stationId, chosenDate) {
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
     var plotHeader = 'Station: ' + filteredData[0].stationId + ', date: ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
     //console.log(filteredData.time.getDate)
-    drawChart(filteredData, areaWidth, areaHeight, 30, plotHeader);
+    var dataLabel = "Bikes"
+    drawChart(filteredData, areaWidth, areaHeight, 30, plotHeader, dataLabel);
   });
 }
 
@@ -223,7 +224,9 @@ function createSystemPlotWeek(chosenDate) {
     var areaHeight = 300;
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
     var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
-    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader);
+
+    var dataLabel = "Bikes %"
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel);
   });
 
 }
@@ -256,7 +259,8 @@ function createSystemPlotOneDay(chosenDate) {
     var areaHeight = 300;
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
     var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
-    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader);
+    var dataLabel = "Bikes %"
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel);
   });
 
 }
