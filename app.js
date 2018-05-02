@@ -79,7 +79,7 @@ function drawLine (graphArea, data, x, y) {
   
 }
 
-function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel) {
+function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel, tickFormat) {
   var animate = false;
   var max_of_array = Math.max.apply(Math, data.map(item => item.avlbikes));
 
@@ -97,7 +97,7 @@ function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel
             .domain([0, d3.max(data, function (d) { return y_heigth; })]);
   
   var xAxis = d3.svg.axis().scale(x).orient('bottom')
-            .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10),
+            .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10).tickFormat(tickFormat).ticks(7)
       yAxis = d3.svg.axis().scale(y).orient('left')
             .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
   console.log(data[0])
@@ -223,10 +223,11 @@ function createSystemPlotWeek(chosenDate) {
     var areaWidth = 1400;
     var areaHeight = 300;
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
-    var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
+    var plotHeader = 'Availability on ' + moment(filteredData[0].time).format('dddd, DD.MM.YYYY')
 
     var dataLabel = "Bikes %"
-    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel);
+    var tickFormat = d3.time.format("%A %d.%m.")
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel, tickFormat);
   });
 
 }
@@ -258,9 +259,10 @@ function createSystemPlotOneDay(chosenDate) {
     var areaWidth = 1400;
     var areaHeight = 300;
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
-    var plotHeader = 'Availability on ' + filteredData[0].time.toLocaleDateString('fi-FI', options)
+    var plotHeader = 'Availability on ' + moment(filteredData[0].time).format('dddd, DD.MM.YYYY')
     var dataLabel = "Bikes %"
-    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel);
+    var tickFormat = d3.time.format("%H")
+    drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel, tickFormat);
   });
 
 }
