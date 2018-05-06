@@ -32,7 +32,7 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
   var symbolCross = {
     path: 'M -4,-4 4,4 M 4,-4 -4,4',
     strokeColor: '#922',
-    strokeWeight: 4
+    strokeWeight: 2
   };
 
   if(value < 1) {
