@@ -27,7 +27,7 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
   //color = '#8efc28'
   scale = 15 * Math.log10(parseFloat(value + 3))
 
-  var markerTitle = 'station: ' + markerTitle + ' - bikes available: ' + value;
+  var markerTitle = 'station: ' + markerTitle + ' - bikes available: ' + Math.floor(value);
   console.log('adding station markers')
   var symbolCross = {
     path: 'M -4,-4 4,4 M 4,-4 -4,4',
