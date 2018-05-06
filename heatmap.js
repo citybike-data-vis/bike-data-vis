@@ -29,20 +29,35 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
 
   var markerTitle = markerTitle + ' - avg: ' + value;
   console.log('adding station markers')
-  var marker = new google.maps.Marker({
-    position: coordinates,
-    map: MAP,
-    title: markerTitle,
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      scale: scale,
-      strokeColor: color,
-      strokeOpacity: 0.8,
-      strokeWeight: 0,
-      fillColor: color,
-      fillOpacity: fillOpacity,
-    }
-  });
+  var symbolCross = {
+    path: 'M -4,-4 4,4 M 4,-4 -4,4',
+    strokeColor: '#922',
+    strokeWeight: 4
+  };
+
+  if(value < 1) {
+    var marker = new google.maps.Marker({
+      position: coordinates,
+      map: MAP,
+      title: markerTitle,
+      icon: symbolCross
+    })
+  } else {
+    var marker = new google.maps.Marker({
+      position: coordinates,
+      map: MAP,
+      title: markerTitle,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: scale,
+        strokeColor: color,
+        strokeOpacity: 0.8,
+        strokeWeight: 0,
+        fillColor: color,
+        fillOpacity: fillOpacity,
+      }
+    })
+  }  
 
   marker.addListener('click', function () {
     console.log('clicked on:', marker.title)
