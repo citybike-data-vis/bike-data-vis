@@ -3,24 +3,24 @@ var MAP;
 var HEATMARKERS = [];
 
 function addStationHeatMarker(coordinates, markerTitle, value) {
-  var color
-  var fillOpacity = 0.8
+  var color ='#006837'
+  var fillOpacity = 0.7
   var scale
 
   if (value < 3) {
-    color = '#addd8e'
+    //color = '#addd8e'
     scale = 5
   } else if (value < 6) {
-    color = '#78c679'
+    //color = '#78c679'
     scale = 10
   } else if (value < 10) {
-    color = '#41ab5d'
+    //color = '#41ab5d'
     scale = 15
   } else if (value < 15) {
-    color = '#238443'
+    //color = '#238443'
     scale = 20
   } else {
-    color = '#006837'
+    //color = '#006837'
     scale = 30
   }
 
@@ -181,17 +181,20 @@ function initMap() {
 
 function addStationHeatMarkers(dayAndHour) {
   dayAndHour = moment(dayAndHour).utc().format('YYYY-MM-DD HH:mm:ss')
-  d3.json(DATAFOLDER + 'hourly-avg-2017-06.csv.json', function (error, availabilityData) {
+  d3.json(DATAFOLDER + 'hourly-avg-2017-06.csv.json').then(function (availabilityData) {
     //filter by selected date
+    console.log("jotain")
     availabilityData = availabilityData.filter(row => 
       row.time === dayAndHour
     )
+    console.log(availabilityData)
     
     //loop availability data row by row
     availabilityData = availabilityData.map(row => {
 
       //get station coordinates from json
-      d3.json(DATAFOLDER + 'stations.json', function (error, stationData) {
+      d3.json(DATAFOLDER + 'stations.json').then(function (stationData) {
+        
         var stationInfo = stationData.stations.find(function(element) {  
           return element.stationId == parseInt(row.stationid);
         });

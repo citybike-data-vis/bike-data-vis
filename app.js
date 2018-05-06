@@ -65,8 +65,8 @@ function startAnimation (chartWidth, rectClip) {
 }
 
 function drawLine (graphArea, data, x, y) {
-  var line = d3.svg.line()
-    .interpolate('basis')
+  var line = d3.line()
+    .curve(d3.curveBasis)
     .x(function (d) { return x(d.time); })
     .y(function (d) { return y(d.avlbikes); });
   
@@ -91,24 +91,26 @@ function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel
       chartWidth  = svgWidth  - margin.left - margin.right,
       chartHeight = svgHeight - margin.top  - margin.bottom
 
-  var x = d3.time.scale().range([0, chartWidth])
+  var x = d3.scaleTime().range([0, chartWidth])
             .domain(d3.extent(data, function (d) { return d.time; })),
-      y = d3.scale.linear().range([chartHeight, 0])
+      y = d3.scaleLinear().range([chartHeight, 0])
             .domain([0, d3.max(data, function (d) { return y_heigth; })]);
   
-  var xAxis = d3.svg.axis().scale(x).orient('bottom')
-            .innerTickSize(-chartHeight).outerTickSize(0).tickPadding(10).tickFormat(tickFormat).ticks(7)
-      yAxis = d3.svg.axis().scale(y).orient('left')
-            .innerTickSize(-chartWidth).outerTickSize(0).tickPadding(10);
+  var xAxis = d3.axisBottom(x)
+            .tickSizeInner(-chartHeight).tickSizeOuter(0).tickPadding(10).tickFormat(tickFormat).ticks(7)
+      yAxis = d3.axisLeft(y)
+            .tickSizeInner(-chartWidth).tickSizeOuter(0).tickPadding(10);
   console.log(data[0])
   var area = d3.select('#plots').insert('div', ':first-child').attr('id', 'plot' + data[0].stationId)
   console.log("hello")
-  var button = area.append('button')
-    .on('click', deletePlot(data[0].stationId))
-    .append('text')
-      .text('delete')
+
   
   area.append('p').append('text').text(plotHeader)
+
+  var button = area.append('button')
+  .on('click', deletePlot(data[0].stationId))
+  .append('text')
+    .text('delete')
 
 
   function _initDrawingArea() {
@@ -146,13 +148,10 @@ function drawChart (data, areaWidth, areaHeight, y_heigth, plotHeader, dataLabel
 
 
 function createPlot(stationId, chosenDate) {
-  var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
+  var parseDate  = d3.timeParse('%Y-%m-%d %H:%M:%S');
   
-  d3.json(DATAFOLDER+'data.json', function (error, rawData) {
-    if (error) {
-      console.error(error);
-      return;
-    }
+  d3.json(DATAFOLDER+'data.json').then(function (rawData) {
+ 
     
     console.log('Now filtering station', stationId, 'data..')
 
@@ -190,15 +189,11 @@ function createPlot(stationId, chosenDate) {
 * param chosenDate: 'YYYY-MM-HH'
 */
 function createSystemPlotWeek(chosenDate) {
-  var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
+  var parseDate  = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
 
-  d3.json(DATAFOLDER + 'hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
+  d3.json(DATAFOLDER + 'hourly-avg-sum-all-stations.csv.json').then(function (rawData) {
 
-    if (error) {
-      console.error(error);
-      return;
-    }
     
     var data = rawData.map(function (d) {
       return {
@@ -226,23 +221,18 @@ function createSystemPlotWeek(chosenDate) {
     var plotHeader = 'Availability on ' + moment(filteredData[0].time).format('dddd, DD.MM.YYYY')
 
     var dataLabel = "Bikes %"
-    var tickFormat = d3.time.format("%A %d.%m.")
+    var tickFormat = d3.timeFormat("%A %d.%m.")
     drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel, tickFormat);
   });
 
 }
 
 function createSystemPlotOneDay(chosenDate) {
-  var parseDate  = d3.time.format('%Y-%m-%d %H:%M:%S').parse;
+  var parseDate  = d3.timeParse('%Y-%m-%d %H:%M:%S')
 
 
-  d3.json(DATAFOLDER + 'hourly-avg-sum-all-stations.csv.json', function (error, rawData) {
+  d3.json(DATAFOLDER + 'hourly-avg-sum-all-stations.csv.json').then(function (rawData) {
 
-    if (error) {
-      console.error(error);
-      return;
-    }
-    
     var data = rawData.map(function (d) {
       return {
         time:  parseDate(d.timehour),
@@ -261,7 +251,7 @@ function createSystemPlotOneDay(chosenDate) {
     var options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric'}
     var plotHeader = 'Availability on ' + moment(filteredData[0].time).format('dddd, DD.MM.YYYY')
     var dataLabel = "Bikes %"
-    var tickFormat = d3.time.format("%H")
+    var tickFormat = d3.timeFormat("%H")
     drawChart(filteredData, areaWidth, areaHeight, 100, plotHeader, dataLabel, tickFormat);
   });
 

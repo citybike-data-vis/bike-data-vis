@@ -35,7 +35,7 @@
     function removeMarkers() {
       HEATMARKERS.map(marker => {
         console.log(marker.icon.fillOpacity);
-
+/*
         setTimeout(function(){
           var oldIcon = marker.getIcon()
           oldIcon.fillOpacity = 0.3
@@ -57,6 +57,8 @@
         setTimeout(function(){
           marker.setMap(null);
         }, 500);
+        */
+       marker.setMap(null);
       });
     }
 
@@ -78,7 +80,7 @@
       addStationHeatMarkers(dateInput)
     }
   </script>
-  <script src="https://d3js.org/d3.v3.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
   <script type='text/javascript' src="heatmap.js"></script>
   <script>
     if (APIKEY) {
