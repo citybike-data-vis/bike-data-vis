@@ -27,7 +27,7 @@ function addStationHeatMarker(coordinates, markerTitle, value) {
   //color = '#8efc28'
   scale = 15 * Math.log10(parseFloat(value + 3))
 
-  var markerTitle = markerTitle + ' - avg: ' + value;
+  var markerTitle = 'station: ' + markerTitle + ' - bikes available: ' + value;
   console.log('adding station markers')
   var marker = new google.maps.Marker({
     position: coordinates,
